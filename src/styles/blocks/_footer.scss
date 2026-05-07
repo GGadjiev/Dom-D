@@ -1,0 +1,250 @@
+.footer {
+  background-color: var(--color-black-alt);
+  padding-block: 68px;
+  position: relative;
+
+  @include laptop {
+    padding-block: 76px;
+  }
+
+  h2 {
+    color: var(--color-black-opacity);
+    font-size: 24px;
+  }
+
+  a {
+    font-size: 18px;
+    color: var(--color-black-opacity);
+
+    &:hover {
+      color: var(--color-orange);
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+    }
+  }
+
+  &__logo {
+    @include desktop-above {
+      position: absolute;
+      left: 50px;
+    }
+
+    @include desktop {
+      align-self: flex-start;
+      width: 140px;
+      height: 36px;
+    }
+
+    @include tablet {
+      align-self: center;
+      position: relative;
+      right: 47px;
+    }
+  }
+
+  &__line {
+    display: block;
+    width: 250px;
+    background-color: #2e2a22;
+    height: 1px;
+  }
+
+  &__types-of-house {
+    &-title {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__anchors {
+    a {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+
+      @include laptop {
+        row-gap: 0;
+      }
+    }
+  }
+
+  &__types-of-house-anchors-block {
+    display: flex;
+    flex-direction: row;
+    column-gap: 120px;
+
+    @include desktop {
+      column-gap: 30px;
+    }
+
+    @include laptop {
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+
+  &__contact-social-block {
+    display: flex;
+    flex-direction: row;
+    column-gap: 120px;
+
+    @include desktop {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    @include tablet {
+      position: relative;
+      left: 25px;
+    }
+  }
+
+  &__contact {
+    a {
+      line-height: 1.74688;
+    }
+
+    &-title {
+      margin-bottom: 20px;
+    }
+
+    &-address {
+      column-gap: 18px;
+
+      &:after {
+        content: '';
+        display: block;
+        background-image: url("/src/img/contact-map.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+        order: -1;
+        position: relative;
+        top: 4px;
+        box-shadow: 0 0 62px 0 var(--color-orange);
+      }
+    }
+
+    &-email {
+      column-gap: 18px;
+
+      &:after {
+        content: '';
+        display: block;
+        background-image: url("/src/img/contact-message.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+        order: -1;
+        position: relative;
+        top: 4px;
+        box-shadow: 0 0 62px 0 var(--color-orange);
+      }
+    }
+
+    &-phone {
+      column-gap: 18px;
+
+      &:after {
+        content: '';
+        display: block;
+        background-image: url("/src/img/contact-phone.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+        order: -1;
+        position: relative;
+        top: 4px;
+        box-shadow: 0 0 62px 0 var(--color-orange);
+      }
+    }
+  }
+
+  &__social {
+    display: grid;
+    grid-template-columns: 40px 135px;
+    grid-template-rows: 40px 40px;
+    row-gap: 50px;
+    column-gap: 40px;
+
+    @include desktop {
+      grid-template-columns: 40px 40px 40px 135px;
+      grid-template-rows: 40px;
+      column-gap: 15px;
+    }
+
+    @include laptop {
+      grid-template-columns: 40px 135px;
+      grid-template-rows: 40px 40px;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+
+    @include tablet {
+      grid-template-columns: 40px 40px 40px 135px;
+      grid-template-rows: 40px;
+      column-gap: 10px;
+    }
+
+    &-youtube-link {
+      text-wrap: nowrap;
+      font-weight: 700;
+      order: 2;
+      line-height: 1.2;
+
+      @include desktop {
+        order: 4;
+      }
+    }
+
+    &-youtube {
+      order: 1;
+
+      @include desktop {
+        order: 3;
+      }
+    }
+
+    &-facebook {
+      order: 3;
+
+      @include desktop {
+        order: 1;
+      }
+    }
+
+    &-instagram {
+      order: 4;
+
+      @include desktop {
+        order: 2;
+      }
+    }
+  }
+
+  &__up-anchor {
+    position: absolute;
+    right: 63px;
+
+    @include laptop {
+      top: clamp(2.125rem, -1.5673rem + 7.6923vw, 5rem);
+      right: clamp(1.25rem, -2.2015rem + 7.1906vw, 3.9375rem);
+    }
+  }
+}

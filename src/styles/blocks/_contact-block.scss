@@ -1,0 +1,14 @@
+.contact-block {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+
+  @include laptop {
+    flex-direction: column;
+    row-gap: 35px;
+  }
+
+  @include tablet {
+    align-items: center;
+  }
+}

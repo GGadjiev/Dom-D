@@ -1,0 +1,115 @@
+.video-block {
+  display: flex;
+  align-items: center;
+  line-height: 1.39;
+  position: relative;
+  padding: 62px 113px;
+  background-color: var(--color-black-alt);
+  background-image: url("/src/img/video-block-background.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 762px 489px;
+
+  @include desktop {
+    padding: 60px 90px;
+    background-size: 450px 489px;
+    min-width: 1060px;
+  }
+
+  @include laptop {
+    min-width: 708px;
+    min-height: 489px;
+    padding: 60px 50px;
+    background-size: 762px 489px;
+    background-position: 400px;
+  }
+
+  @include tablet {
+    max-width: 337px;
+    min-width: 337px;
+    min-height: 588px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 50px 8px;
+  }
+
+  &__title {
+    font-size: 36px;
+    color: var(--color-orange);
+    margin-bottom: 20px;
+    max-width: 417px;
+    align-self: flex-end;
+
+    @include laptop {
+      margin-bottom: 8px;
+      max-width: 368px;
+    }
+
+    @include tablet {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description {
+    color: var(--color-white);
+    font-size: 24px;
+    margin-bottom: 80px;
+
+    @include laptop {
+      max-width: 285px;
+      margin-bottom: 26px;
+    }
+
+    @include tablet {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    @include desktop {
+      width: 430px;
+      height: 367px;
+    }
+
+    @include laptop {
+      width: 321px;
+      height: 274px;
+      align-self: flex-end;
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+    }
+
+    @include tablet {
+      position: relative;
+      inset: 0;
+    }
+  }
+
+  &__decoration {
+    position: absolute;
+    bottom: 50px;
+    right: -250px;
+    rotate: 150deg;
+    z-index: -1;
+
+    @include desktop {
+      right: -600px;
+    }
+
+    @include laptop {
+      bottom: 0;
+    }
+  }
+
+  &__button {
+    @include tablet {
+      display: none;
+    }
+  }
+}

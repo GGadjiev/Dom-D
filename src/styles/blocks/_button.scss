@@ -1,0 +1,31 @@
+.button {
+  min-width: var(--button-width);
+  min-height: var(--button-height);
+  background: var(--gradient);
+  font-size: 16px;
+  color: var(--color-black);
+  border-style: unset;
+
+  &_hover {
+    &:hover {
+      box-shadow: var(--shadow-button-shiny);
+    }
+  }
+
+  &_arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+      content: "";
+      display: block;
+      background-image: url("/src/img/button=arrow.svg");
+      height: 8px;
+      width: 27px;
+      order: 1;
+      background-repeat: no-repeat;
+      margin-left: 22px;
+      margin-top: 2px;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+
+    &:not(:first-child) {
+      display: none;
+    }
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      grid-template-rows: unset;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    width: 427px;
+    height: 476px;
+    background-color: var(--color-white-opacity60);
+    box-shadow: var(--shadow-article);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    &:hover {
+      background-color: var(--color-orange);
+      transition-duration: var(--transition-duration);
+
+      button {
+        background: var(--color-white-background);
+        transition-duration: var(--transition-duration);
+      }
+
+      svg {
+        color: var(--color-white-background);
+        transition-duration: var(--transition-duration);
+      }
+    }
+
+    @include desktop {
+      width: 340px;
+      height: 476px;
+    }
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+
+  &__item-header {
+    padding-inline: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__item-title {
+    display: inline-block;
+    font-size: 32px;
+    height: 90px;
+    line-height: 1.2;
+
+    @include desktop-above {
+      height: 70px;
+    }
+
+    @include desktop {
+      max-width: 230px;
+      font-size: 28px;
+    }
+  }
+
+  &__item-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+      margin: 0 auto;
+    }
+  }
+
+  &__item-image {
+    width: 413px;
+    height: 260px;
+    object-fit: cover;
+    align-self: flex-start;
+
+    &_flex-end {
+      align-self: flex-end;
+      width: 355px;
+
+      @include desktop {
+        width: 260px;
+      }
+    }
+  }
+
+  &__dot {
+    color: var(--color-orange);
+    align-self: flex-end;
+    position: relative;
+    right: 25px;
+    top: 0;
+
+    @include desktop-above {
+      top: -20px;
+    }
+
+    @include tablet {
+      visibility: hidden;
+    }
+  }
+}

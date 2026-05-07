@@ -1,0 +1,115 @@
+.section {
+  padding-block: var(--section-padding-y);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &__header {
+    margin-bottom: 60px;
+    line-height: 1.2;
+    text-align: center;
+
+    > :only-child {
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      margin-bottom: 40px;
+    }
+
+    @include laptop {
+      max-width: 700px;
+      margin-bottom: 30px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    max-width: 1050px;
+    margin-bottom: 30px;
+
+    @include desktop {
+      margin-bottom: 25px;
+    }
+
+    @include tablet {
+      max-width: 700px;
+    }
+  }
+
+  &__description {
+    font-size: 36px;
+
+    @include desktop {
+      font-size: 30px;
+    }
+
+    @include tablet {
+      @include fluid-font(24, 30, 375, 767);
+      max-width: 352px;
+      margin: 0 auto;
+    }
+  }
+
+  &__decoration {
+    display: block;
+    width: 907.28px;
+    height: 403.45px;
+    border-radius: 100%;
+    background: var(--gradient);
+    filter: blur(308px) opacity(30%);
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__background {
+    display: flex;
+    z-index: -1;
+    &_company-intro {
+      position: absolute;
+      top: -100px;
+      display: block;
+      width: 100%;
+      height: 1003px;
+      background-image: url("/src/img/about-company-background.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      @include laptop {
+        height: 1516px;
+      }
+
+      @include tablet {
+        height: 1090px;
+        top: 0;
+      }
+    }
+
+    &_contact-block {
+      background-image: url("/src/img/contact-background.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 820px;
+
+      @include laptop {
+        height: 1412px;
+      }
+
+      @include tablet {
+        height: 1210px;
+      }
+    }
+  }
+}

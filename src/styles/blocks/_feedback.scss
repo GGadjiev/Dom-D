@@ -1,0 +1,80 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 68px 98px 39px 98px;
+  width: 50%;
+  background-color: var(--color-white-opacity60);
+
+  @include desktop {
+    padding: 67px 35px 40px 40px;
+    height: 551px;
+  }
+
+  @include laptop {
+    width: 520px;
+  }
+
+  @include tablet {
+    width: 335px;
+    height: 491px;
+    padding: 40px 26px 40px 26px;
+  }
+
+  &__title {
+    font-size: 36px;
+    margin-bottom: 25px;
+
+    @include tablet {
+      font-size: 24px;
+
+    }
+  }
+
+  &__description {
+    font-size: 22px;
+    margin-bottom: 25px;
+    line-height: 1.74688;
+
+    @include desktop {
+      margin-bottom: 46px;
+      line-height: 1.5;
+    }
+
+    @include laptop {
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    height: var(--textarea-height);
+    resize: none;
+    border: none;
+    box-shadow: var(--shadow-textarea);
+    background: var(--color-grey-textarea);
+    padding: 15px 15px;
+    font-size: 14px;
+    color: var(--color-grey-textarea-text);
+    text-shadow: var(--shadow-textarea);
+    margin-bottom: 15px;
+  }
+
+  &__input {
+    width: 100%;
+    height: var(--input-height);
+    border: none;
+    box-shadow: var(--shadow-textarea);
+    background: var(--color-grey-textarea);
+    padding: 15px 15px;
+    font-size: 14px;
+    color: var(--color-grey-textarea-text);
+    text-shadow: var(--shadow-textarea);
+    margin-bottom: 35px;
+  }
+}

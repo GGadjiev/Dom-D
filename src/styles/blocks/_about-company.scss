@@ -1,0 +1,94 @@
+.about-company {
+  background-color: var(--color-black-alt);
+  width: 100vw;
+
+  &__background {
+    padding-bottom: 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    padding-block: 80px;
+
+    @include desktop {
+      padding-block: 70px;
+    }
+
+    @include laptop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 244px);
+      align-items: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    @include laptop {
+      column-gap: 10px;
+
+      &:last-child {
+        grid-column: 1 / 4;
+      }
+    }
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: 10px;
+      &:last-child {
+        grid-column: unset;
+      }
+    }
+  }
+
+  &__description {
+    color: var(--color-white);
+    max-width: 130px;
+
+    &_long {
+      max-width: 220px;
+
+      @include desktop {
+        max-width: 130px;
+      }
+
+      @include laptop {
+        max-width: unset;
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include tablet {
+        max-width: 230px;
+      }
+    }
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__big-icon {
+    font-size: 64px;
+    color: var(--color-orange);
+    font-weight: 700;
+
+    @include tablet {
+      line-height: 1;
+    }
+  }
+
+  &__youtube-icon {
+    @include tablet {
+      width: 47px;
+      height: 47px;
+    }
+  }
+}

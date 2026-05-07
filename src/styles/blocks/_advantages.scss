@@ -1,0 +1,87 @@
+.advantages {
+  @include laptop {
+    max-width: 708px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 122px 40px;
+
+    @include desktop {
+      gap: 80px 20px;
+    }
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 76px 28px;
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      max-width: 340px;
+      gap: 40px 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    column-gap: 22px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 13px;
+
+    @include desktop {
+      font-size: 20px;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+  }
+
+  &__svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 92px;
+    max-height: 92px;
+    background-color: var(--color-white);
+    color: var(--color-orange);
+
+    svg {
+      width: 53px;
+      height: 53px;
+    }
+
+    @include desktop {
+      min-width: 70px;
+      max-height: 70px;
+
+      svg {
+        width: 43px;
+        height: 43px;
+      }
+    }
+  }
+
+  &__decoration {
+    position: absolute;
+    left: -700px;
+    bottom: -350px;
+    rotate: -25deg;
+
+    @include laptop {
+      left: -500px;
+      bottom: -500px;
+    }
+  }
+}

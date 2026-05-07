@@ -1,0 +1,177 @@
+.header {
+  background-color: var(--color-black);
+
+  &__container {
+    height: 136px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet-above {
+      @include fluid-width(668, 1100, 768, 1366);
+    }
+
+    @include desktop-above {
+      @include fluid-width(1100, 1360, 1366, 1920);
+    }
+
+    @include tablet {
+      @include fluid-width(357, 748, 375, 768);
+    }
+
+    @include tablet {
+      column-gap: 7px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+  }
+
+  &__burger-button {
+    position: absolute;
+    left: 30px;
+    right: 0;
+
+    @include laptop {
+      left: 13px;
+    }
+  }
+
+  &__logo {
+    width: 172px;
+    height: 44.5px;
+    margin-bottom: 7.5px;
+
+    @include tablet {
+      width: 127px;
+      height: 33px;
+    }
+  }
+
+  &__logo-block {
+    position: relative;
+    display: flex;
+    column-gap: 21.5px;
+
+
+    @include laptop {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    @include tablet {
+      left: 30px;
+      top: 16px;
+      height: 110px;
+      order: 1;
+    }
+  }
+
+  &__build-time {
+    font-size: 14px;
+    width: 243px;
+    color: var(--color-white);
+    line-height: 1.4;
+
+    @include laptop {
+      font-size: 12px;
+      width: 198px;
+    }
+
+    @include desktop-above {
+      position: absolute;
+      left: 194px;
+    }
+
+    &_weight-text {
+      font-weight: 700;
+      font-size: 18px;
+    }
+  }
+
+  &__message-container {
+    @include tablet {
+      display: flex;
+      left: clamp(0.5rem, -0.5164rem + 4.3367vw, 1.5625rem);
+      order: 3;
+      position: relative;
+    }
+  }
+
+  &__message-container-text {
+    margin-bottom: 13px;
+    text-align: center;
+    color: var(--color-orange);
+    text-shadow: 0 0 3px rgba(211, 190, 136, 0.86);
+
+    @include fluid-font(12, 14, 768, 1366);
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__phone-block {
+    @include tablet {
+      order: 2;
+    }
+  }
+
+  &__phone-block-number {
+    display: flex;
+    align-items: center;
+    column-gap: 9.24px;
+    color: var(--color-white);
+    font-weight: 700;
+    margin-bottom: 7px;
+
+    &::before {
+      content: '';
+      background-image: url("/src/img/phone.svg");
+      display: block;
+      width: 18.57px;
+      height: 18.08px;
+      position: relative;
+      top: 0;
+    }
+
+    @include fluid-font(14, 18, 375, 768);
+
+    @include tablet {
+      column-gap: 5.43px;
+      white-space: nowrap;
+      position: relative;
+      top: 10px;
+      right: 32px;
+
+    }
+  }
+
+  &__phone-block-button {
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

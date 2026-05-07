@@ -1,0 +1,30 @@
+.slider {
+  width: 120px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+
+  &__left-button {
+    @include reset-button;
+    width: 32px;
+    height: 30px;
+    background-image: url("/src/img/slider-left-arrow.svg");
+    background-position: center;
+  }
+
+  &__right-button {
+    @include reset-button;
+    width: 32px;
+    height: 30px;
+    background-image: url("/src/img/slider-slider-right.svg");
+    background-position: center;
+  }
+
+  @include tablet-above {
+    display: none;
+  }
+
+  &_visible {
+    display: flex;
+  }
+}

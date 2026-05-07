@@ -1,0 +1,239 @@
+.first-section {
+  position: relative;
+  height: clamp(46.5625rem, -0.2505rem + 54.792vw, 65.5rem);
+  background-image: url("/src/img/first-section-background-desktop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-clip: border-box;
+  overflow: clip;
+
+  @include desktop-above {
+    background-size: cover;
+    background-position: center;
+  }
+
+  @include desktop {
+  }
+
+  @include laptop {
+    height: 888px;
+    background-size: cover;
+  }
+
+  @include tablet {
+    height: 676px;
+  }
+
+  &__left-content {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      align-items: center;
+    }
+  }
+
+  &__left-content-title {
+    text-shadow: 0 0 29px #000;
+    font-size: 42px;
+    max-width: 600px;
+    line-height: 1.2;
+    margin-bottom: 29px;
+
+    @include desktop {
+      margin-bottom: 21px;
+    }
+
+    @include laptop {
+      margin-bottom: 56px;
+    }
+
+    @include tablet {
+      max-width: 430px;
+      text-align: center;
+      margin-bottom: 19px;
+      font-size: 24px;
+      order: 1;
+    }
+
+    &_big {
+      display: inline-block;
+      font-size: 60px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      font-weight: 900;
+
+      @include desktop {
+        margin-bottom: 4px;
+      }
+
+      @include laptop {
+        margin-bottom: 8px;
+        text-wrap: nowrap;
+      }
+
+      @include tablet {
+        text-wrap: wrap;
+      }
+    }
+  }
+
+  &__left-content-text {
+    color: var(--color-white);
+    font-size: 24px;
+    text-shadow: 0 0 25px #000;
+    line-height: 1.2;
+    max-width: 636px;
+    margin-bottom: 60px;
+
+    @include desktop {
+      margin-bottom: 49px;
+    }
+
+    @include laptop {
+      max-width: 317px;
+      margin-bottom: 78px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+      text-align: center;
+      text-shadow: 4px 5px 28px 0 #000;
+      margin-bottom: 28px;
+      order: 3;
+    }
+  }
+
+  &__left-content-button {
+    @include tablet {
+      order: 4;
+    }
+
+    @include tablet-above {
+      visibility: hidden;
+    }
+  }
+
+  &__works-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 277.46px);
+    justify-content: stretch;
+    justify-items: stretch;
+    column-gap: 23.81px;
+    row-gap: 24px;
+
+    @include desktop {
+      grid-template-columns: repeat(3, 160px);
+    }
+
+    @include laptop {
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: repeat(2, 160px);
+      column-gap: 20px;
+      row-gap: 18px;
+    }
+
+    @include tablet {
+      column-gap: 15px;
+      row-gap: 14px;
+      margin-bottom: 18px;
+      order: 2;
+    }
+  }
+
+  &__works {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 8px;
+    height: 60px;
+    background-color: var(--color-white-opacity71);
+    color: var(--color-brown-text);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    backdrop-filter: blur(5px);
+
+    &:hover {
+      background-color: var(--color-orange-alt);
+      color: var(--color-black);
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    @include tablet-above {
+      top: clamp(7.5rem, -12.5848rem + 23.5081vw, 15.625rem);
+    }
+
+    @include tablet {
+      justify-content: center;
+      flex-wrap: wrap;
+      top: 40px;
+    }
+  }
+
+  &__right-content {
+    min-width: 371.64px;
+    height: 478px;
+    position: relative;
+    bottom: 23px;
+    background-color: var(--color-white-opacity71);
+
+    @include desktop {
+      min-width: 340px;
+      height: 452px;
+    }
+
+    @include laptop {
+      position: relative;
+      top: 74.5px;
+      right: 233px;
+    }
+
+    @include tablet {
+      visibility: hidden;
+    }
+  }
+
+  &__right-content-title {
+    max-height: 95px;
+    font-size: 32px;
+    text-align: center;
+    color: var(--color-black);
+    padding-top: 40px;
+    margin-bottom: 15px;
+
+    @include desktop {
+      padding-top: 28px;
+    }
+  }
+
+  &__right-content-text {
+    max-width: 315px;
+    max-height: 45px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 auto 32px;
+  }
+
+  &__right-content-image {
+    margin: 0 auto 40px;
+
+    @include desktop {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__right-content-button {
+    display: block;
+    margin: 0 auto;
+  }
+}
