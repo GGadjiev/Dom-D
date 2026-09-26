@@ -504,7 +504,7 @@ h3 {
 .button_arrow::before {
   content: "";
   display: block;
-  background-image: url("/src/img/button=arrow.svg");
+  background-image: url("../img/button=arrow.svg");
   height: 8px;
   width: 27px;
   order: 1;
@@ -557,7 +557,7 @@ h3 {
   border: none;
   width: 32px;
   height: 30px;
-  background-image: url("/src/img/slider-left-arrow.svg");
+  background-image: url("../img/slider-left-arrow.svg");
   background-position: center;
 }
 .slider__right-button {
@@ -566,7 +566,7 @@ h3 {
   border: none;
   width: 32px;
   height: 30px;
-  background-image: url("/src/img/slider-slider-right.svg");
+  background-image: url("../img/slider-slider-right.svg");
   background-position: center;
 }
 @media (min-width: 768px) {
@@ -748,7 +748,7 @@ h3 {
 }
 .header__phone-block-number::before {
   content: "";
-  background-image: url("/src/img/phone.svg");
+  background-image: url("../img/phone.svg");
   display: block;
   width: 18.57px;
   height: 18.08px;
@@ -783,7 +783,7 @@ h3 {
 .first-section {
   position: relative;
   height: clamp(46.5625rem, -0.2505rem + 54.792vw, 65.5rem);
-  background-image: url("/src/img/first-section-background-desktop.png");
+  background-image: url("../img/first-section-background-desktop.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -1250,7 +1250,7 @@ h3 {
   display: block;
   width: 100%;
   height: 1003px;
-  background-image: url("/src/img/about-company-background.png");
+  background-image: url("../img/about-company-background.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1267,7 +1267,7 @@ h3 {
   }
 }
 .section__background_contact-block {
-  background-image: url("/src/img/contact-background.png");
+  background-image: url("../img/contact-background.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1295,7 +1295,7 @@ h3 {
   position: relative;
   padding: 62px 113px;
   background-color: var(--color-black-alt);
-  background-image: url("/src/img/video-block-background.png");
+  background-image: url("../img/video-block-background.png");
   background-repeat: no-repeat;
   background-position: right;
   background-size: 762px 489px;
@@ -1643,7 +1643,7 @@ h3 {
 }
 .company-intro__item::after {
   content: "";
-  background-image: url("/src/img/checkmark.svg");
+  background-image: url("../img/checkmark.svg");
   background-position: center;
   display: block;
   min-width: 21px;
@@ -1968,7 +1968,7 @@ h3 {
 .contact__address::after {
   content: "";
   display: block;
-  background-image: url("/src/img/contact-map.svg");
+  background-image: url("../img/contact-map.svg");
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -1999,7 +1999,7 @@ h3 {
 .contact__email::after {
   content: "";
   display: block;
-  background-image: url("/src/img/contact-message.svg");
+  background-image: url("../img/contact-message.svg");
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -2055,7 +2055,7 @@ h3 {
 .contact__phone::after {
   content: "";
   display: block;
-  background-image: url("/src/img/contact-phone.svg");
+  background-image: url("../img/contact-phone.svg");
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -2197,7 +2197,7 @@ h3 {
 .footer__contact-address:after {
   content: "";
   display: block;
-  background-image: url("/src/img/contact-map.svg");
+  background-image: url("../img/contact-map.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 20px;
@@ -2213,7 +2213,7 @@ h3 {
 .footer__contact-email:after {
   content: "";
   display: block;
-  background-image: url("/src/img/contact-message.svg");
+  background-image: url("../img/contact-message.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 20px;
@@ -2229,7 +2229,7 @@ h3 {
 .footer__contact-phone:after {
   content: "";
   display: block;
-  background-image: url("/src/img/contact-phone.svg");
+  background-image: url("../img/contact-phone.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 20px;
